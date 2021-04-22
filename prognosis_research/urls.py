@@ -23,4 +23,10 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('whats_new/', include('whats_new.urls')),
+    path('prognosis/', include('prognosis.urls')),
+    path('our_book/', include('our_book.urls')),
+    path('methods_guidance/', include('methods_guidance.urls')),
+    path('videos/', include('videos.urls')),
+    path('courses_and_events/', include('courses_and_events.urls')),
+    path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -60,6 +60,12 @@ INSTALLED_APPS = [
     # my apps
     'home',
     'whats_new',
+    'prognosis',
+    'our_book',
+    'methods_guidance',
+    'videos',
+    'courses_and_events',
+    'contact',
 ]
 
 # Provider specific settings
