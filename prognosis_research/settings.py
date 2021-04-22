@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     # 'allauth.socialaccount.providers.twitter',
     # my apps
     'home',
+    'whats_new',
 ]
 
 # Provider specific settings
