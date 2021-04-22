@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for page in site_pages %}
-        <a href="{{ page.page_link }}">{{ page.name }}</a>
+<h1>Site Updates Log</h1>
+    {% for log in site_logs %}
+        {{ log.date }}: <a href="{% url log.updated_page.page_link %}">{{ log.updated_page.name }}</a><br/>
+        <p>{{ log.message_p1 }}
+            {% if log.link_1_url %}
+                <a href="{{ log.link_1_url }}" target="_blank">{{ log.link_1_name }}</a>
+            {% endif %}
+            {% if log.message_p2 %}
+                {{ log.message_p2 }}
+            {% endif %}
+            {% if log.link_2_url %}
+                <a href="{{ log.link_2_url }}" target="_blank">{{ log.link_2_name }}</a>
+            {% endif %}
+        </p>
     {% endfor %}
 {% endblock %}

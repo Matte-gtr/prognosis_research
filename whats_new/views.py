@@ -27,10 +27,10 @@ def latest_research(request):
 
 def site_updates_log(request):
     """ a view to display the whats new page """
-    site_pages = Site_Page.objects.all()
+    site_logs = Site_Log.objects.all().order_by('-date')
     template = 'whats_new/site_updates_log.html'
     context = {
         'title': "site updates log",
-        'site_pages': site_pages,
+        'site_logs': site_logs,
     }
     return render(request, template, context)
