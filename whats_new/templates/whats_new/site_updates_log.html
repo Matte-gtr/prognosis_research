@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for page in site_pages %}
+        <a href="{{ page.page_link }}">{{ page.name }}</a>
+    {% endfor %}
+{% endblock %}

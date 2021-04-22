@@ -1,4 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-
+    {% if years %}
+        {% for year in years %}
+            <div>{{ year.year }}</div>
+            {% for update in updates %}
+                {% if update.year == year %}
+                    <div>{{ update.update }} <a href="{{ update.link_url }}" target="_blank">{{ update.link_name }}</a></div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p>No Research available</p>
+    {% endif %}
 {% endblock %}
