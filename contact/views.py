@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def contact(request):
+    """ a view to display the contact page """
+    template = "contact/contact.html"
+    context = {
+        'title': 'contact'
+    }
+    return render(request, template, context)

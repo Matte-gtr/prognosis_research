@@ -11,41 +11,45 @@ def prognosis(request):
 
 
 def video_introduction(request):
-    """ a view for the Prognosis page """
-    template = 'prognosis/prognosis.html'
+    """ a view for the video introduction page """
+    template = 'prognosis/video_introduction.html'
     context = {
-        'title': 'prognosis'
+        'title': 'video introduction'
     }
     return render(request, template, context)
 
-def Prognosis(request):
-    """ a view for the Prognosis page """
-    template = 'prognosis/prognosis.html'
+
+def what_is_prognosis(request):
+    """ a view for the what is prognosis page """
+    template = 'prognosis/what_is_prognosis.html'
     context = {
-        'title': 'prognosis'
+        'title': 'what is prognosis'
     }
     return render(request, template, context)
 
-def Prognosis(request):
-    """ a view for the Prognosis page """
-    template = 'prognosis/prognosis.html'
+
+def what_is_prognosis_research(request):
+    """ a view for the what is prognosis research page """
+    template = 'prognosis/what_is_prognosis_research.html'
     context = {
-        'title': 'prognosis'
+        'title': 'what is prognosis research'
     }
     return render(request, template, context)
 
-def Prognosis(request):
-    """ a view for the Prognosis page """
-    template = 'prognosis/prognosis.html'
+
+def the_progress_framework(request):
+    """ a view for the progress framework page """
+    template = 'prognosis/the_progress_framework.html'
     context = {
-        'title': 'prognosis'
+        'title': 'the progress framework'
     }
     return render(request, template, context)
 
-def Prognosis(request):
-    """ a view for the Prognosis page """
-    template = 'prognosis/prognosis.html'
+
+def quotes_of_note(request):
+    """ a view for the quotes of note page """
+    template = 'prognosis/quotes_of_note.html'
     context = {
-        'title': 'prognosis'
+        'title': 'quotes of note'
     }
     return render(request, template, context)
