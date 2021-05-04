@@ -1,4 +1,65 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>The PROGRESS Framework</h1>
+    <p>
+        The <strong>PROGRESS (PROGnosis RESearch Strategy) framework</strong> classifies prognosis research into four main types of study:
+    </p>
+    <ol type="1">
+        <li>
+            <a href="https://www.bmj.com/content/bmj/346/bmj.e5595.full.pdf" target="_blank">Overall prognosis research:</a> Studies that summarise the average risk of an outcome (e.g. death) or expected value of an 
+            outcome (e.g. pain score) among people with the health condition of interest in a particular healthcare setting.
+        </li>
+        <li>
+            <a href="https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pmed.1001380/1/pmed.1001380.pdf?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20210430%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210430T171004Z&X-Goog-Expires=3600&X-Goog-SignedHeaders=host&X-Goog-Signature=215d7f5d5a5ff7673c6ca13f1e5fb89c0cc95101cf02ef28bf5d5afbf19de6d59e4243a86f5ff811a98ca9b8b2c341ee4d740fc75787069b4136d3ab5cb396fb9bd906de90cbf3aea80ad863ef66ffe1cdd93f2cb4c11b922c94be91d3c5a5f96d4ba78ef7a2644b16424252ed8865b52ae40440a54a635daab02584fadb4f7c14cddf5673a54d30c5b426560937ebaee62469608683f06db380088bcdfac13e5e2f8640dbbe8ae8b6c6204b19019788240594e8e673b8bf8df47545723ad1e0daead71ab27a143242e4bc50e0cd820810260a315e59e1beb1f33003b9e4decacac87e266e7f69279139548f81c3415293e80128c6e143cb8f7ba39905a9332c" target="_blank">Prognostic factor research:</a> Studies that identify factors whose values (levels) are associated with changes in the 
+            outcome's risk or expected value.
+        </li>
+        <li>
+            <a href="https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pmed.1001381/1/pmed.1001381.pdf?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20210430%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210430T170847Z&X-Goog-Expires=3600&X-Goog-SignedHeaders=host&X-Goog-Signature=4906516834eff509f4c9470d5989301f36d37926af72ddc4854a4a635f767165cc682d135f39a234b9a12ef992735840bc2102dd4b463825c713a97068747cca383ed5696ede48aaa2116037aeaa1b2d4983d948605b609be6f8709520337b0f977f3c7b9259d5910d4407b54a0f516bcd6b74b154a362bae53d2cb4616417fc4002155a300eb73407ee165a33e51eca1dd1cce7ce79b0701b364c538d0b3aca63e8fb2b5023d978c952c2135b7b1f5121db2ab4589e3d43c26ac5fcb955e9761c48e0fcfde7d381aa7ad895197440b3574a9a87318235cdeac8428e5c166702e62d266b4049a35936c7ccebc0a468976f9e25d428f508e7f9e60dde2648ced0" target="_blank">Prognostic model research:</a> Studies that develop, validate or assess the impact of a prognostic model to predict an individual’s 
+            outcome risk or expected outcome value using combinations of prognostic factors.
+        </li>
+        <li>
+            <a href="https://www.bmj.com/content/bmj/346/bmj.e5793.full.pdf" target="_blank">Predictors of treatment effect research:</a> Studies that identify how to tailor treatment decisions for individual patients 
+            according to whether they are likely to benefit from particular treatments.  
+        </li>
+    </ol>
+    <h2>
+        Why is the PROGRESS framework important?
+    </h2>
+    <p>
+        Prior to publication of the PROGRESS framework, commentators had identified the lack of a clear framework for prognosis research, as highlighted by 
+        inconsistent terminology, muddled concepts, and poor standards of design, analysis and reporting. This was making the prognosis field notorious for 
+        issues such as small studies, publication bias and lack of replication of previous findings. To emphasise the potential impact and importance of 
+        prognosis research, Chapter 2 of our <a href="{% url 'textbooks' %}">textbook</a> illustrates the logic of the four study types with the example of 
+        research into the prognosis of women diagnosed with breast cancer.
+    </p>
+    <p>
+        Researching <strong>overall prognosis</strong> provides estimates of the average survival of women diagnosed with breast cancer in a particular 
+        population, time and healthcare context. It answers questions such as: “In the context of current care, what proportion of women with this 
+        condition are expected to be alive at 5 years after diagnosis?”. This enables an understanding of the burden of disease, with comparisons across 
+        settings (e.g. regions, hospitals, countries), and over time to examine improvements.
+    </p>
+    <p>
+        Researching <strong>prognostic factors</strong> focuses on whether particular characteristics of the cancer, the women, their treatment and the 
+        healthcare system,  are associated with changes in individual outcome risk (e.g. 5-year survival). Prognostic factors help refine prognosis to 
+        subgroups of individuals that share the same characteristics, and factors may even identify potential targets for intervention to improve survival. 
+        It is important to examine whether novel prognostic factors (e.g. biomarkers) actually add prognostic value over and above standard prognostic 
+        variables (e.g. age, stage of disease). Prognostic factors are also important for the design and analysis of randomised trials of interventions, 
+        and as adjustment for confounding in observational studies examining treatment effects.
+    </p>
+    <p>
+        <strong>Prognostic model</strong> research involves the development, validation and impact assessment of models that use multiple prognostic 
+        factors in combination to tailor outcome prediction to individuals. Such models can be used in everyday practice to help shared decision-making 
+        about care - for example, the PREDICT model uses nine factors (age; diagnosis; tumour size, spread, and severity; three biomarkers; therapy) to 
+        calculate an individual’s 5-year post-surgery survival probability.
+    </p>
+    <p>
+        Research investigating <strong>predictors of treatment effect</strong> aims to identify whether subgroups based on individual characteristics 
+        (e.g. age, blood pressure, biomarker values) can predict who will and will not benefit from a particular treatment. A study of this type showed 
+        that oestrogen receptor status predicted response to treatment with tamoxifen in women with breast cancer (PDF), a finding used to target 
+        therapy at women who will benefit.
+    </p>
+    <p>
+        The PROGRESS framework outlined many areas where the design, conduct and reporting of prognosis research studies must be improved, for each of 
+        the four types. <strong>Please visit our <a href="{% url 'methods_guidance' %}">guidance</a> for further details.</strong>
+    </p>
 {% endblock %}

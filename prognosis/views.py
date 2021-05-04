@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Quote_of_note
 
 
 def prognosis(request):
@@ -48,8 +49,10 @@ def the_progress_framework(request):
 
 def quotes_of_note(request):
     """ a view for the quotes of note page """
+    quotes = Quote_of_note.objects.all().order_by('-date_added')
     template = 'prognosis/quotes_of_note.html'
     context = {
-        'title': 'quotes of note'
+        'title': 'quotes of note',
+        'quotes': quotes,
     }
     return render(request, template, context)

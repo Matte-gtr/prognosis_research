@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Video Introduction</h1>
+    <h1>PROGRESS in Prognosis Research</h1>
+    <p>
+        In this video, Prof Richard Riley provides an introduction to prognosis, prognosis research, 
+        and <a href="{% url 'the_progress_framework' %}">the PROGRESS framework.</a>
+    </p>
+    <div class="video-container">
+        <iframe class="yt-standard" 
+            src="https://www.youtube.com/embed/PpaC6oskIxw?autoplay=0&mute=0&controls=1&loop=0&origin=https%3A%2F%2Fwww.prognosisresearch.com&playsinline=1&enablejsapi=1&widgetid=7">
+        </iframe>
+    </div>
 {% endblock %}

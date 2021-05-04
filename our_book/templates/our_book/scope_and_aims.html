@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Scope and Aims</h1>
+    <h1>PROGNOSIS RESEARCH IN HEALTHCARE<br/> Concepts, Methods and Impact</h1>
+    <img src="{{ MEDIA_URL }}prognosis_book_cover.jpg">
+    <h4>Scope and Aims:</h4>
+    <p class="mb-1">This book:</p>
+    <ul>
+        <li>is a practical text about how to do prognosis research for people who are developing, conducting, interpreting and appraising prognosis studies.</li>
+        <li>considers each of the four prognosis study types in detail (see <a href="{% url 'the_progress_framework' %}">PROGRESS framework</a>)</li>
+        <li>covers the use of primary study data, as well as systematic reviews and meta-analysis of primary prognosis studies</li>
+        <li>addresses recent developments, including the use of individual participant data from multiple studies, analysing data from routinely collected electronic health records, and the evolving roles of machine learning and data science</li>
+    </ul>
+    <h4>Intended Audience:</h4>
+    <p>
+        The book is intended for a wide audience and uses examples covering a wide spectrum of disease and clinical settings. It is a resource for students, 
+        clinicians, researchers, methodologists, healthcare professionals and policymakers who wish to learn more about the role of prognosis in healthcare, 
+        the methods of prognosis research, and the translation of prognosis research results into improving healthcare outcomes in individuals and populations.
+    </p>
+    <p>
+        It is also complementary to two other leading textbooks in the field (by <a href="https://www.springer.com/gp/book/9781441929181" target="_blank">Harrell</a> 
+        and <a href="https://www.springer.com/gp/book/9780387772431" target="_blank">Steyerberg</a>). Our textbook provides a broad introduction to why and 
+        how to do prognosis studies for a readership including healthcare professionals who want to participate in and use prognosis research. The books by 
+        Harrell and Steyerberg provide further in-depth discussion of statistical techniques, in particular those used for prediction modelling.
+    </p>
 {% endblock %}

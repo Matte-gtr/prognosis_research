@@ -1,4 +1,49 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>What is Prognosis?</h1>
+    <ul>
+        <li>
+            A British man aged 55 has a check-up at the local clinic and is told that he has a small increased 
+            risk of having a heart attack within the next 10 years, compared to the average of all British men 
+            of his age. He is advised that treatment to lower his cholesterol level will reduce that risk.
+        </li>
+        <li>
+            A young child in India is in a road traffic accident and is admitted to hospital in an unconscious state. 
+            Her parents want to understand what the likelihood is that the child will recover in the next year, and 
+            what can be done to improve the chances of her recovery.
+        </li>
+        <li>
+            A pregnant woman in South Africa is found on a routine antenatal visit to have a raised blood pressure. 
+            Her doctor needs to calculate, and share with the mother, what the probability is, given available 
+            treatment, that the unborn child will be affected and how likely it is that the mother will have raised 
+            blood pressure 6 months after giving birth.
+        </li>
+    </ul>
+    <p>
+        These examples of interactions between people with health problems and their healthcare professional and 
+        healthcare systems concern <strong>prognosis.</strong>
+    </p>
+    <p>
+        <strong>Prognosis</strong> in healthcare is the forecast of future outcomes in people with a particular 
+        health condition. For binary or time-to-event outcomes it can be can be expressed as a probability - “patients similar to 
+        you have a 90% chance of recovering from your back pain within one month” or “there is a one-in-five chance 
+        of perinatal death among infants born to women in South Africa diagnosed with pre-eclampsia during 
+        pregnancy”. (ref) For continuous outcomes, it can be expressed as an expected value - "for hypertension 
+        patients with your characteristics, we expect blood pressure at 6 months to be about 150mmHg".
+    </p>
+    <p>
+        Doctors and other healthcare professionals use statements about prognosis to
+    </p>
+    <ul>
+        <li>
+            inform individuals and their families about likely future outcomes and
+        </li>
+        <li>
+            help make decisions with individuals and their families about the best care and treatments to improve those outcomes.
+        </li>
+    </ul>
+    <p>
+        Such evidence-based prognosis statements depend on robust findings from high-quality 
+        <a href="{% url 'what_is_prognosis_research' %}">prognosis research</a> studies.
+    </p>
 {% endblock %}

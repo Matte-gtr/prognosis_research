@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Quotes of Note</h1>
+    <p>
+        A selection of notable quotes about prognosis and prognosis research.  
+        We'll add entries regularly. For suggestions, please contact us.
+    </p>
+    {% for quote in quotes %}
+        <h6 class="mb-0">{{ quote.quote }}</h6>
+        <p>{{ quote.author }}<br/>{{ quote.comments }}</p>
+    {% endfor %}
 {% endblock %}

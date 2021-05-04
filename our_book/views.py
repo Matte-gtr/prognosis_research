@@ -30,7 +30,7 @@ def table_of_contents(request):
 
 def about_the_editors(request):
     """ a view for the about the editors page """
-    template = 'our_book/prognosis.html'
+    template = 'our_book/about_the_editors.html'
     context = {
         'title': 'about the editors'
     }
