@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Textbook
 
 
 def methods_guidance(request):
@@ -66,8 +67,10 @@ def software_websites_and_apps(request):
 
 def textbooks(request):
     """ a view for the textbooks page """
+    textbooks = Textbook.objects.all().order_by('pk')
     template = 'methods_guidance/textbooks.html'
     context = {
-        'title': 'textbooks'
+        'title': 'textbooks',
+        'textbooks': textbooks,
     }
     return render(request, template, context)
