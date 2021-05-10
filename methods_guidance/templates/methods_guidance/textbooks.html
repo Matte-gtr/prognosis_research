@@ -1,4 +1,52 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Textbooks</h1>
+    <h1>Recommended Textbooks</h1>
+    <h6>Prognosis Research in Healthcare: concepts, methods & impact</h6>
+    <a href="" target="_blank"><img src="{{ MEDIA_URL }}prognosis_book_cover.jpg" alt="Prognosis Research Book"></a>
+    <p>
+        Prognosis Research in Healthcare: Concepts, Methods and Impact provides a comprehensive overview of the field of prognosis and prognosis 
+        research and gives a global perspective on how prognosis research and prognostic information can improve the outcomes of healthcare. It 
+        details how to design, carry out, analyse and report prognosis studies, and how prognostic information can be the basis for tailored, 
+        personalised healthcare. In particular, the book discusses how information about the characteristics of people, their health, and environment 
+        can be used to predict an individual's future health.
+    </p>
+    <p>
+        Prognosis Research in Healthcare: Concepts, Methods and Impact, addresses all types of prognosis research and provides a practical 
+        step-by-step guide to undertaking and interpreting prognosis research studies, ideal for medical students, health researchers, healthcare 
+        professionals and methodologists, as well as for guideline and policy makers in healthcare wishing to learn more about the field of prognosis.
+    </p>
+    <p>
+        <a href="{% url 'table_of_contents' %}">MORE DETAILS HERE</a>
+    </p>
+    <h6>Clinical prediction models: a practical approach to development, validation and updating (Second Edition)</h6>
+    <a href="" target="_blank"><img src="{{ MEDIA_URL }}steyerberg_book_cover.jpg" alt="Clinical Prediction Models Book"></a>
+    <p>
+        The second edition of this volume provides insight and practical illustrations on how modern statistical concepts and regression methods can be 
+        applied in medical prediction problems, including diagnostic and prognostic outcomes. Many advances have been made in statistical approaches 
+        towards outcome prediction, but  a sensible strategy is needed for model development, validation, and updating, such that prediction models 
+        can better support medical practice.
+    </p>
+    <p>
+        There is an increasing need for personalized evidence-based medicine that uses an individualized approach to medical decision-making.  In this 
+        Big Data era,  there is expanded access to large volumes of routinely collected data and an increased number of applications for prediction 
+        models, such as targeted early detection of disease and individualized approaches to diagnostic testing and treatment.  Clinical Prediction 
+        Models presents a practical checklist that needs to be considered for development of a valid prediction model. Steps include preliminary 
+        considerations such as dealing with missing values; coding of predictors; selection of main effects and interactions for a multivariable model; 
+        estimation of model parameters with shrinkage methods and incorporation of external data; evaluation of performance and usefulness; internal 
+        validation; and presentation formatting. The text also addresses common issues that make prediction models suboptimal, such as small sample 
+        sizes, exaggerated claims, and poor generalizability.
+    </p>
+    <h6>Regression Modeling Strategies: with applications to linear models, logistic and ordinal Regression, and survival analysis (Second Edition)</h6>
+    <a href="" target="_blank"><img src="{{ MEDIA_URL }}harrell_book_cover.jpg" alt="Regression Modeling Strategies Book"></a>
+    <p>
+        This highly anticipated second edition features new chapters and sections, 225 new references, and comprehensive R software. In keeping with the 
+        previous edition, this book is about the art and science of data analysis and predictive modeling, which entails choosing and using multiple tools. 
+        Instead of presenting isolated techniques, this text emphasizes problem solving strategies that address the many issues arising when developing 
+        multivariable models using real data and not standard textbook examples. It includes imputation methods for dealing with missing data effectively, 
+        methods for fitting nonlinear relationships and for making the estimation of transformations a formal part of the modeling process, methods for 
+        dealing with "too many variables to analyze and not enough observations," and powerful model validation techniques based on the bootstrap.  The 
+        reader will gain a keen understanding of predictive accuracy, and the harm of categorizing continuous predictors or outcomes.  This text realistically 
+        deals with model uncertainty, and its effects on inference, to achieve "safe data mining." It also presents many graphical methods for communicating 
+        complex regression models to non-statisticians.
+    </p>
 {% endblock %}

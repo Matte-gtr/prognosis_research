@@ -1,4 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Software, Websites and Apps</h1>
+    <h1>Software, Websites & Apps</h1>
+    <p>
+        The following are software packages, apps and websites dedicated specifically to prognosis research.<br/>
+        Many generic (e.g. regression model or machine learning) packages can also be used to undertake prognosis research
+    </p>
+    <p>
+        The list is in development, and certainly not exhaustive.<br/>
+        Please <a href="{% url 'contact' %}">get in touch</a> to provide more recommendations to add. 
+    </p>
+    <ul>
+        <li><strong>rms:</strong> <a href="https://cran.r-project.org/web/packages/rms/rms.pdf" target="_blank">suite</a> for regression and prediction modelling produced for R by Prof Frank Harrell Jr.</li>
+        <li>An excellent introduction to the rms and hsmisc packages is <a href="https://www.nicholas-ollberding.com/post/an-introduction-to-the-harrell-verse-predictive-modeling-using-the-hmisc-and-rms-packages/" target="_blank">here</a></li>
+    </ul>
+    <ul>
+        <li>PM suite of modules produced by <a href="https://www.keele.ac.uk/pcsc/ourpeople/ensorjoie/" target="_blank">Dr Joie Ensor</a>:</li>
+        <ul>
+            <li><strong>pmsampsize:</strong> <a href="https://cran.r-project.org/web/packages/pmsampsize/pmsampsize.pdf" target="_blank">R</a> and <a href="https://ideas.repec.org/c/boc/bocode/s458569.html" target="_blank">Stata</a> packages for sample size calculations for prediction model development studies</li>
+            <li><strong>pmcalplot:</strong> <a href="https://ideas.repec.org/c/boc/bocode/s458486.html" target="_blank">Stata</a> package for producing calibration plots</li>
+        </ul>
+    </ul>
+    <ul>
+        <li><strong>stcoxcal:</strong> a <a href="https://journals.sagepub.com/doi/pdf/10.1177/1536867X1401400403" target="_blank">Stata</a> package for examining the calibration performance of a survival model at particular time-point(s)</li>
+        <li><strong><a href="https://www.thomasdebray.be/software" target="_blank">metamisc:</a></strong> an <a href="https://cran.r-project.org/web/packages/metamisc/index.html" target="_blank">R</a> package for conducting meta-analysis of prognosis studies by <a href="https://www.umcutrecht.nl/en/research/researchers/debray-thomas-tpa" target="_blank">Dr Thomas Debray</a></li>
+    </ul>
+    <ul>
+        <li><a href="https://riskcalc.org/pmsamplesize/" target="_blank"><strong>A web app</strong></a> by Mike Kattan for calculating <a href="{% url 'prognostic_models' %}">Riley et al.'s sample size required for developing clinical prediction models</a></li>
+    </ul>
+    <ul>
+        <li>Visit <a href="http://decisioncurveanalysis.org/" target="_blank">decisioncurveanalysis.org</a> for software, data sets, tutorials etc. on net benefit & decision curves</li>
+    </ul>
 {% endblock %}
+
