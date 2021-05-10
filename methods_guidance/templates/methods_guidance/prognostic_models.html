@@ -1,4 +1,122 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Prognostic Models</h1>
+    <h4>Sample size for developing a prognostic model</h4>
+    <ul>
+        <li>Calculating the sample size required for developing a clinical prediction model (<a href="https://www.bmj.com/content/bmj/368/bmj.m441.full.pdf" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>A note on estimating the Cox‐Snell R2 from a reported C statistic (AUROC) to inform sample size calculations for developing a prediction model with a binary outcome (<a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/sim.8806" target="_blank">PDF</a>)</li>
+        <li>Minimum sample size for developing a multivariable prediction model: PART I ‐ continuous outcomes  (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.7993" target="_blank">PDF</a>)</li>
+        <li>Minimum sample size for developing a multivariable prediction model: PART II ‐ binary & time‐to‐event outcomes (<a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/sim.7992" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>Sample size for binary logistic prediction models: Beyond events per variable criteria (<a href="https://journals.sagepub.com/doi/pdf/10.1177/0962280218784726" target="_blank">PDF</a>)</li>
+        <li>No rationale for 1 variable per 10 events criterion for binary logistic regression analysis (<a href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-016-0267-3" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>The problems with using a split-sample for model development and validation (<a href="https://www.fharrell.com/post/split-val/" target="_blank">blog</a>)</li>
+    </ul>
+    <ul>
+        <li>Adaptive sample size determination for the development of clinical prediction models (<a href="https://www.researchsquare.com/article/rs-87100/v1" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>How Can Machine Learning be Reliable When the Sample is Adequate for Only One Feature? (<a href="https://www.fharrell.com/post/ml-sample-size/" target="_blank">blog</a>)</li>
+        <li>Modern Modelling Techniques Are Data Hungry: A Simulation Study for Predicting Dichotomous Endpoints (<a href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-14-137" target="_blank">PDF</a>)</li>
+    </ul>
+    <p><strong>Videos</strong> on sample size for model development available <a href="{% url 'sample_size_for_prediction_modeling' %}">here</a></p>
+    <p>"Why the EPV ≥ 10 sample size rule is rubbish and what to use instead" - slides by Dr Maarten van Smeden available <a href="https://www.slideshare.net/MaartenvanSmeden/why-the-epv10-sample-size-rule-is-rubbish-and-what-to-use-instead" target="_blank">here</a></p>
+
+    <h4>Sample size for external validation of a prognostic model</h4>
+    <ul>
+        <li>Minimum sample size for external validation of a clinical prediction model with a binary outcome (in-press, Stat Med)</li>
+        <li>External validation of clinical prediction models: simulation-based sample size calculations were more reliable than rules of thumb (<a href="https://www.jclinepi.com/article/S0895-4356(21)00048-2/abstract" target="_blank">PDF</a>)</li>
+        <li>
+            Minimum sample size for external validation of a clinical prediction model with a continuous outcome (<a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/sim.8766" target="_blank">PDF</a>)
+            (also see corresponding <strong>videos</strong> <a href="{% url 'sample_size_for_prediction_modeling' %}" target="_blank">here</a>)​
+        </li>
+    </ul>
+    <ul>
+        <li>Sample size considerations for the external validation of a multivariable prognostic model: a resampling study (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.6787" target="_blank">PDF</a>)</li>
+        <li>A calibration hierarchy for risk models was defined: from utopia to empirical data (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0895435615005818" target="_blank">PDF</a>)</li>
+        <li>Substantial effective sample sizes were required for external validation studies of predictive logistic regression models (<a href="https://www.jclinepi.com/article/S0895-4356(05)00019-3/fulltext" target="_blank">PDF</a>)</li>
+        <li>Discrimination-based sample size calculations for multivariable prognostic models for time-to-event data (<a href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-015-0078-y" target="_blank">PDF</a>)</li>
+    </ul>
+
+    <h4>Stages of prognostic model research</h4>
+    <ul>
+        <li>Prognosis and prognostic research: what, why, and how?  (<a href="https://www.bmj.com/content/338/bmj.b375" target="_blank">PDF</a>)</li>
+        <li>Prognosis and prognostic research: developing a prognostic model (<a href="https://www.bmj.com/content/338/bmj.b604?ijkey=223b01d041a3c7acead88ffa55133ba020c22936&keytype2=tf_ipsecsha" target="_blank">PDF</a>) </li>
+        <li>Prognosis and prognostic research: Validating a prognostic model (<a href="https://www.bmj.com/content/338/bmj.b605?ijkey=726263ddfb650e769d42d2b0361549f5e4bd87c7&keytype2=tf_ipsecsha" target="_blank">PDF</a>)</li>
+        <li>Prognosis and prognostic research: application and impact of prognostic models in clinical practice (<a href="https://www.bmj.com/content/338/bmj.b606?ijkey=aa064dcc0280fa2b1d859d2d49b19df30655fd4b&keytype2=tf_ipsecsha" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>Guide to presenting clinical prediction models for use in clinical settings (<a href="https://www.bmj.com/content/bmj/365/bmj.l737.full.pdf" target="_blank">PDF</a>)</li>
+        <li>Presentation of multivariate data for clinical use: The Framingham Study risk score functions (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.1742" target="_blank">PDF</a>)</li>
+    </ul>
+
+    <h4>Improving prognostic model research</h4>
+    <ul>
+        <li>The basics of prediction modelling, and related topics (<a href="https://www.slideshare.net/MaartenvanSmeden/the-basics-of-prediction-modeling" target="_blank">slides</a> from <a href="https://twitter.com/MaartenvSmeden" target="_blank">Dr Maarten van Smeden</a>)</li>
+        <li>Key steps and common pitfalls in developing and validating risk models (<a href="https://obgyn.onlinelibrary.wiley.com/doi/full/10.1111/1471-0528.14170" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy... (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291097-0258%2819960229%2915%3A4%3C361%3A%3AAID-SIM168%3E3.0.CO%3B2-4" target="_blank">PDF</a>)</li>
+        <li>Towards better clinical prediction models: seven steps for development and an ABCD for validation (<a href="https://academic.oup.com/eurheartj/article/35/29/1925/2293109" target="_blank">PDF</a>)</li>
+        <li>Everything you always wanted to know about evaluating prediction models (but were too afraid to ask) (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2997853/pdf/nihms-216147.pdf" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>Variable selection – A review and recommendations for the practicing statistician (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/bimj.201700067" target="_blank">PDF</a>)</li>
+        <li>Harnessing repeated measurements of predictor variables for clinical risk prediction: a review of existing methods (<a href="https://diagnprognres.biomedcentral.com/track/pdf/10.1186/s41512-020-00078-z.pdf" target="_blank">PDF</a>)</li>
+    </ul>
+    <p><strong>Notes of caution:</strong></p>
+    <ul>
+        <li>Penalization and shrinkage methods produced unreliable clinical prediction models especially when sample size was small (<a href="https://www.jclinepi.com/action/showPdf?pii=S0895-4356%2820%2931209-9" target="_blank">PDF</a>) (also see <strong>video</strong> <a href="{% url 'penalisation_and_shrinkage' %}">here</a>)</li>
+        <li>Inappropriate use of bivariable analysis to screen risk factors for use in multivariable analysis (<a href="https://www.jclinepi.com/article/0895-4356(96)00025-X/pdf" target="_blank">PDF</a>)</li>
+        <li>Poor performance of clinical prediction models: the harm of commonly applied methods (<a href="https://www.jclinepi.com/article/S0895-4356(17)30788-6/abstract" target="_blank">PDF</a>)</li>
+        <li>Regression shrinkage methods for clinical prediction models do not guarantee improved performance ... (<a href="https://journals.sagepub.com/doi/abs/10.1177/0962280220921415" target="_blank">PDF</a>)</li>
+        <li>Three myths about risk thresholds for prediction models (<a href="https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-019-1425-3" target="_blank">PDF</a>)</li>
+        <li>Quantifying the impact of different approaches for handling continuous predictors on the performance of a prognostic model (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.6986" target="_blank">PDF</a>)</li>
+    </ul>
+    <p>
+        <strong>Video</strong> on controversies in prediction modelling using statistical methods and machine learning available <a href="{% url 'controversies_in_prediction_modeling' %}">here</a><br/>
+        <strong>Video</strong> on COVID-19 related prediction models available <a href="{% url 'covid19_prediction_models' %}">here</a>
+    </p>
+
+    <h4>Evaluating the performance of a prognostic model</h4>
+    <ul>
+        <li>A calibration hierarchy for risk models was defined: from utopia to empirical data (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0895435615005818" target="_blank">PDF</a>)</li>
+        <li>Calibration: the Achilles heel of predictive analytics (<a href="https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-019-1466-7" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>Internal validation of predictive models: efficiency of some procedures for logistic regression analysis (<a href="https://www.jclinepi.com/article/S0895-4356(01)00341-9/fulltext" target="_blank">PDF</a>)</li>
+        <li>Prediction models need appropriate internal, internal-external, and external validation (<a href="#" target="_blank"><strong class="text-red">PDF NO LINK</strong></a>)</li>
+        <li>Construction and validation of a prognostic model across several studies ... (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.1691" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>Assessment of predictive performance in incomplete data by combining internal validation & multiple imputation (<a href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-016-0239-7" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>Validation and updating of risk models based on multinomial logistic regression (<a href="https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-016-0002-x" target="_blank">PDF</a>)</li>
+        <li>Assessing calibration of multinomial risk prediction models (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.6114" target="_blank">PDF</a>)</li>
+        <li>A spline-based tool to assess and visualize the calibration of multiclass risk predictions (<a href="https://www.sciencedirect.com/science/article/pii/S1532046415000027?via%3Dihub" target="_blank">PDF</a>)</li>
+    </ul>
+    <ul>
+        <li>External validation of a Cox prognostic model: principles and methods (<a href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-13-33" target="_blank">PDF</a>)</li>
+        <li>Tools for checking calibration of a Cox model in external validation: Approach based on individual event probabilities (<a href="https://journals.sagepub.com/doi/pdf/10.1177/1536867X1401400403" target="_blank">PDF</a>)</li>
+        <li>Graphical calibration curves and the integrated calibration index (ICI) for survival models (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8570" target="_blank">PDF</a>)</li>
+        <li>External validation of clinical prediction models using big datasets from e-health records or IPD meta-analysis (<a href="#" target="_blank"><strong class="text-red">PDF NO LINK</strong></a>)</li>
+    </ul>
+    <ul>
+        <li>Net benefit approaches to the evaluation of prediction models, molecular markers, and diagnostic tests (<a href="https://www.bmj.com/content/352/bmj.i6" target="_blank">PDF</a>)</li>
+        <li>Extensions to decision curve analysis, a novel method for evaluating diagnostic tests, prediction models and molecular markers (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2611975/pdf/1472-6947-8-53.pdf" target="_blank">PDF</a>)</li>
+    </ul>
+
+    <h4>Improving prognostic survival models</h4>
+    <ul>
+        <li>Temporal recalibration for improving prognostic model development and risk predictions ... (<a href="https://academic.oup.com/ije/advance-article/doi/10.1093/ije/dyaa030/5815624" target="_blank">PDF</a>)</li>
+        <li>Prognostic Models With Competing Risks: Methods and Application to Coronary Risk Prediction (<a href="https://www.jstor.org/stable/25662702?seq=1#metadata_info_tab_contents" target="_blank">PDF</a>)</li>
+        <li>Validation, calibration, revision and combination of prognostic survival models (<a href="https://onlinelibrary.wiley.com/doi/10.1002/1097-0258(20001230)19:24%3C3401::AID-SIM554%3E3.0.CO;2-2" target="_blank">PDF</a>)</li>
+        <li>Flexible Parametric Survival Analysis Using Stata: Beyond the Cox Model (<a href="https://www.timberlake.co.uk/shop/flexible-parametric-survival-analysis-using-stata-beyond-the-cox-model.html" target="_blank">PDF</a>)</li>
+    </ul>
 {% endblock %}

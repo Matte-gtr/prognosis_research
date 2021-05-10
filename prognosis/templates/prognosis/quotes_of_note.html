@@ -7,6 +7,6 @@
     </p>
     {% for quote in quotes %}
         <h6 class="mb-0">{{ quote.quote }}</h6>
-        <p>{{ quote.author }}<br/>{{ quote.comments }}</p>
+        <blockquote>{{ quote.author }}<br/>{{ quote.comments }}</blockquote>
     {% endfor %}
 {% endblock %}
