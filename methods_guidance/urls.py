@@ -16,6 +16,6 @@ urlpatterns = [
     path('reporting/', views.reporting, name="reporting"),
     path('software_websites_and_apps/', views.software_websites_and_apps,
          name="software_websites_and_apps"),
-    path('textbooks/', views.textbooks,
-         name="textbooks"),
+    path('textbooks/', views.textbooks, name="textbooks"),
+    path('add_textbook/', views.add_textbook, name="add_textbook"),
 ]

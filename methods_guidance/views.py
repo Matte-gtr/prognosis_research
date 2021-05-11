@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, redirect
+from django.contrib import messages
 from .models import Textbook
+from .forms import TextbookForm
 
 
 def methods_guidance(request):
@@ -68,9 +70,24 @@ def software_websites_and_apps(request):
 def textbooks(request):
     """ a view for the textbooks page """
     textbooks = Textbook.objects.all().order_by('pk')
+    form = TextbookForm()
     template = 'methods_guidance/textbooks.html'
     context = {
         'title': 'textbooks',
         'textbooks': textbooks,
+        'form': form
     }
     return render(request, template, context)
+
+
+def add_textbook(request):
+    if request.method == 'POST':
+        form = TextbookForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Textbook successfully added')
+        else:
+            messages.error(request, 'error adding textbook, please check the \
+                           form is valid')
+            return redirect(reverse('textbooks'))
+    return redirect(reverse('textbooks'))
