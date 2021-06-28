@@ -4,14 +4,16 @@
     {% for textbook in textbooks %}
         <h5>{{ textbook.name }}</h5>
         <a href="{{ textbook.image_link }}" target="_blank"><img src="{{ textbook.image.url }}" alt="{{ textbook.name }}"></a>
-        <div>{{ textbook.description|linebreaks }}</div>
+        <div>{{ textbook.description|linebreaks }}</div><div>{{ textbook.description|safe }}</div>
         {% if textbook.optional_link %}
             <p><a href="{{ textbook.optional_link }}">{% if textbook.optional_link_text %}{{ textbook.optional_link_text }}{% else %}Link{% endif %}</a></p>
         {% endif %}
     {% endfor %}
-    <form method="POST" action="{% url 'add_textbook' %}" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form }}
-        <button class="btn btn-success" type="submit">Add</button>
-    </form>
+    <div class="container bg-light p-2">
+        <form method="POST" action="{% url 'add_textbook' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn btn-success" type="submit">Add</button>
+        </form>
+    </div>
 {% endblock %}
